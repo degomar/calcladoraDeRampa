@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#9792C5"
+    >
+
+    <TextView
+        android:id="@+id/main_rotulo_inclinacaomedia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato"
+        android:text="Inclinnação média"
+        android:textColor="#333"
+        android:layout_marginTop="54dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/main_inclinaresultado"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:fontFamily="@font/lato_light"
+        android:layout_marginTop="30dp"
+        android:textSize="72sp"
+        android:layout_margin="20dp"
+        android:text="i: ...%"
+        app:layout_constraintTop_toBottomOf="@id/main_rotulo_inclinacaomedia"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+    <TextView
+        android:id="@+id/main_resultado_comentario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato"
+        android:textSize="20sp"
+        android:text="piso plano"
+        android:textColor="#333"
+        app:layout_constraintTop_toBottomOf="@id/main_inclinaresultado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/main_caixa_slider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/main_resultado_comentario"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="#6AFFFFFF"
+
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Desnível (m)"
+            android:textColor="#333"
+            android:layout_marginTop="20dp"
+            />
+        <com.google.android.material.slider.Slider
+            android:id="@+id/main_disninvel_slider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:valueFrom="0.00"
+            android:valueTo="5.00"
+            android:layout_margin="30dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Comprimento (m)"
+            android:textColor="#333"
+
+            />
+        <com.google.android.material.slider.Slider
+            android:id="@+id/main_comprimennto_slider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:valueFrom="0.00"
+            android:valueTo="5.00"
+            android:layout_margin="30dp"
+            />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
